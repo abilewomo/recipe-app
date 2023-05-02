@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import Form from './components/Form'
+import Category from './components/Categories'
+import { RecipeAPI } from './apis/RecipeAPI'
 
-function App() {
+export default function App() {
+ const  [recipe, setRecipe] = useState(null)
+ const  [category, setCategory] = useState([])
+ 
+ useEffect(() => {
+  RecipeAPI.getcategory().then((categories) => {
+    // response handling
+    setCategory(categories)
+  })
+}, [])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form ></Form>
+      <Category categories = {category}></Category>
     </div>
-  );
+  )
 }
-
-export default App;

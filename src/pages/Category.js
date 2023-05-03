@@ -10,7 +10,6 @@ export default function Category(props){
         // response handling
         setRecipe(recipe)
     })},[])
-    console.log(recipe)
     return(
         <div>
             <Main recipe = {recipe}/>

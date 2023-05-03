@@ -51,15 +51,13 @@ useEffect(() => {
     <div className="App">
       <Nav />
       <form onSubmit={handleSubmit} onChange={handleChange} value={formData.searchterm}>
-                <input type="text" name="searchfield" />
-                <input type="submit" value = "Search" />
+                <input className='textfield' type="text" name="searchfield" />
+                <input className='submit' type="submit" value = "Search" />
         </form>
       <Routes>
         <Route path="/" element={<Main recipe = {recipe}/>}/>
         <Route path="/categories" element={<Categories categories = {category}/>}/>
         <Route path="/categories/:name" element={<Category getrecipe = {RecipeAPI.getRecipe} />}/>
-        <Route path="/recipes" element={<Recipe/>}/>
-        <Route path="/recipes/:recipe" element={<Recipe/>}/>
       </Routes>
     </div>
   )

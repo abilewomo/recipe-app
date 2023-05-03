@@ -8,7 +8,7 @@ export default function Nav (){
         <div>HOME</div>
       </Link>
       <Link to="/Categories">
-        <div>Categories</div>
+        <div>CATEGORIES</div>
       </Link>
 
     </div>

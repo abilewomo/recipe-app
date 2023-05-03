@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+.nav{
+  background-color: #ef9c97;
+  display: flex;
+  padding: 25px;
+}
+.nav a{
+  text-decoration: none;
+  min-width: 10vw;
+  padding: 0 10px;
+  color: #fff;
+  font-weight:bolder;
+  font-size: 1.5em;
+}
+form{
+top: 100px;
+position: relative;
+display: flex;
+justify-content: center;
+}
+.textfield{
+  min-height: 4vh;
+  min-width: 50vw;
+  color:#687a8f ;
+  font-size: 1em;
+  padding: 5px 20px;
+}
+.submit{
+  background-color: #687a8f;
+  color: #fff;
+  border: none;
+}
+.recipe, .category{
+  top: 150px;
+  position: relative; 
+  padding: 20px;
+  display: block;
+}
+.recipe img{
+  width: 20vw;
+ 
+}
+.recipe p, h2{
+  text-align: justify;
+}
+.category{
+  display: block;
+  position: relative;
+  width: 30%;
+  float: left;
+  margin: auto;
+}
+.category img{
+  width: 10vw;
+}
+.category p{
+  text-align: justify;
+}

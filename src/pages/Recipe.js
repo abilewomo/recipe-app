@@ -15,7 +15,7 @@ export default function Recipe({recipe}){
                 {JSX}
             </div>
         )
-    };
+    }
     
     //function to return loading JSX
     const loading = () => {

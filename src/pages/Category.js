@@ -1,19 +1,20 @@
-import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import {useParams} from "react-router-dom"
+import Main from "./Main"
 
 export default function Category(props){
-
-     const JSX = props.categories.map((category) => (
-         <div key = {category.idCategory}>
-            <h3>{category.strCategory}</h3>
-            <Link to={`/categories/${category.strCategory}`}><img src={category.strCategoryThumb} /></Link>
-            <p>{category.strCategoryDescription}</p>
-        </div>
-     )
-
-     )
+    const params = useParams()
+    const  [recipe, setRecipe] = useState([])
+    
+    useEffect(() => {props.getrecipe(params.name).then((recipe) => {
+        // response handling
+        setRecipe(recipe)
+    })},[])
+    console.log(recipe)
     return(
         <div>
-            {JSX}
+            <Main recipe = {recipe}/>
         </div>
-    )
+    )  
+
 }

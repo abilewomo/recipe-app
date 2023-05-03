@@ -57,7 +57,7 @@ useEffect(() => {
       <Routes>
         <Route path="/" element={<Main recipe = {recipe}/>}/>
         <Route path="/categories" element={<Categories categories = {category}/>}/>
-        <Route path="/categories/:name" element={<Category />}/>
+        <Route path="/categories/:name" element={<Category getrecipe = {RecipeAPI.getRecipe} />}/>
         <Route path="/recipes" element={<Recipe/>}/>
         <Route path="/recipes/:recipe" element={<Recipe/>}/>
       </Routes>

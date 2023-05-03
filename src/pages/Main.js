@@ -1,4 +1,5 @@
 export default function Main(props){
+    console.log(props)
     const JSX = props.recipe.map((recipe) => (
         <div key = {recipe.idMeal}>
            <h3>{recipe.strMeal}</h3>

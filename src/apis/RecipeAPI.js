@@ -1,24 +1,24 @@
 import { api } from "./axiosConfig"
-//import { defineCancelApiObject } from "./configs/axiosUtils"
+
 
 export const RecipeAPI = {
-    get:async function(id){
+    getRandomRecipe:async function(){
         const response = await api.request({
-            url: `/lookup.php?i=${id}`,
+            url: `/random.php`,
             method: "GET",
            
         })
-        return response.data
+        return response.data.meals
     },
-    search : async function (name){
+    getRecipe : async function (name){
         const response = await api.request({
             url: `/search.php?s=${name}`,
             method: "GET",
            
         })
-        return response.data
+        return response.data.meals
     },
-    getcategory: async function () {
+    getcategories: async function () {
 
     // make fetch request and store response
     const response = await api.request({

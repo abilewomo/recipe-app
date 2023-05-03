@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
-export default function Categories(props){
+export default function Category(props){
+
      const JSX = props.categories.map((category) => (
          <div key = {category.idCategory}>
             <h3>{category.strCategory}</h3>

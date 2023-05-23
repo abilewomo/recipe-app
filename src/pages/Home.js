@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import Main
- from './Main'
+import Main from './Main'
 export default function Home(props){
 const [formData, setFormData] = useState({
                 searchfield:  "",
